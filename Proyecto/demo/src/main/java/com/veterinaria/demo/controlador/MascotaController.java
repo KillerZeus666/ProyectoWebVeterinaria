@@ -24,6 +24,12 @@ import com.veterinaria.demo.servicio.ClienteService;
 import com.veterinaria.demo.servicio.MascotaService;
 import com.veterinaria.demo.servicio.VeterinarioService;
 
+
+/*Documentacion
+ * http://localhost:8082/swagger-ui/index.html#/mascota-controller/detalleMascota
+ */
+
+
 @RestController
 @RequestMapping("mascota")
 @CrossOrigin(origins = "http://localhost:4200")
@@ -46,9 +52,9 @@ public class MascotaController {
 
     /**
      * Muestra todas las mascotas registradas.
-     * URL: http://localhost:8082/mascota
+     * URL: http://localhost:8082/mascota/all
      */
-    @GetMapping
+    @GetMapping("/all")
     public List<Mascota> mostrarMascotas() {
         return mascotaService.obtenerTodasMascotas();
     }
